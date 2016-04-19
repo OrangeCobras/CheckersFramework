@@ -6,14 +6,17 @@ package checkers;
  */
 public class Move {
 
+    private final Point start;
     private final Direction direction;
     private final int scalar;
 
     /**
+     * @param start the starting point of the move
      * @param direction the direction of the move
      * @param length the length of the move (scalar)
      */
-    public Move(Direction direction, int length) {
+    public Move(Point start, Direction direction, int length) {
+        this.start = start;
         this.direction = direction;
         this.scalar = length;
     }
@@ -30,6 +33,13 @@ public class Move {
      */
     public int getDeltaY() {
         return this.direction.getDeltaY() * scalar;
+    }
+
+    /**
+     * @return the starting point
+     */
+    public Point getStart() {
+        return start;
     }
 
 }
