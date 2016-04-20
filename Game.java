@@ -23,6 +23,7 @@ public class Game {
 
     public void start() {
         /***** TODO *****/
+        // inititalize board
         // manage game status
         // get moves
         // validate moves
