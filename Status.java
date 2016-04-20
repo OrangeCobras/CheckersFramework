@@ -5,8 +5,8 @@ package CheckersFramework;
  * @author Hendrik
  */
 public enum Status {
-    TurnFirstPlayer,
-    TurnSecondPlayer,
+    TurnWhitePlayer,
+    TurnBlackPlayer,
     GameEnded;
 
 }
