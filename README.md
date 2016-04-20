@@ -1,6 +1,9 @@
 # A checkers framework in Java
 
+## General
+
 This is the framework for creating a checkers implementation.
+It uses the international rules as specified on https://en.wikipedia.org/wiki/International_draughts.
 
 ## Setup
 
