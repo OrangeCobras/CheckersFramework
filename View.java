@@ -10,4 +10,11 @@ public interface View {
 
     public void setStatus(Status status);
 
+    /**
+     * Invalidate the view.
+     *
+     * This means the view needs to be redrawn.
+     */
+    public void invalidate();
+
 }
