@@ -3,7 +3,10 @@
 ## General
 
 This is the framework for creating a checkers implementation.
-It uses the international rules as specified on https://en.wikipedia.org/wiki/International_draughts.
+It uses the international rules as specified on https://en.wikipedia.org/wiki/International_draughts
+with the following exceptions:
+
+* you don't have to capture the maximum number of pieces possible
 
 ## Setup
 
