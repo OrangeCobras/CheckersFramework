@@ -14,9 +14,5 @@ with the following exceptions:
 2. Clone Repository    
     `git clone <url>`
 3. Move to cloned directory
-4. Add remotes
-    * origin    
-        `git remote add origin https://github.com/OrangeCobras/CheckersFramework.git`
-
-    * own version    
-        `git remote add <name> <url>`
+4. Add remote for your fork
+    `git remote add <name> <url>`
