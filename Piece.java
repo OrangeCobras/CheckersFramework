@@ -29,4 +29,11 @@ public enum Piece {
         return king;
     }
 
+    /**
+     * @return the color
+     */
+    public Color getColor() {
+        return color;
+    }
+
 }
