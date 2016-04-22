@@ -22,7 +22,7 @@ public class Game {
     }
 
     public void start() {
-        /***** TODO *****/
+        /* **** TODO **** */
         // inititalize board
         // manage game status
         // get moves - input.getMove()
