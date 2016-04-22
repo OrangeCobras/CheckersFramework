@@ -25,10 +25,10 @@ public class Game {
         /***** TODO *****/
         // inititalize board
         // manage game status
-        // get moves
-        // validate moves
+        // get moves - input.getMove()
+        // validate moves - isValid(Move m)
         // execute moves
-        // update views
+        // update views - updateViews()
     }
 
     private boolean isValid(Move m) {
