@@ -34,7 +34,7 @@ public class Game {
 
     private boolean isValid(Move m) {
         /* **** TODO **** */
-        // check if piece at starting point of m is of right color
+        // check if piece at starting point of m is of right color - hasRightColor(Point p)
         // check if player can capture a piece
         // check if move does capture a piece
         // check if the endpoint is on the board
