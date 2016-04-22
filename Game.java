@@ -31,6 +31,16 @@ public class Game {
         // update views
     }
 
+    private boolean isValid(Move m) {
+        /* **** TODO **** */
+        // check if piece at starting point of m is of right color
+        // check if player can capture a piece
+        // check if move does capture a piece
+        // check if the endpoint is on the board
+        // check if there's room at the endpoint
+        return false;
+    }
+
     private void updateViews() {
         views.stream().forEach((v) -> {
             v.setBoard(board);
