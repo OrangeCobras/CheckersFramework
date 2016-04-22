@@ -1,5 +1,6 @@
 package CheckersFramework;
 
+import static CheckersFramework.Color.*;
 import java.util.LinkedList;
 
 /**
@@ -39,6 +40,17 @@ public class Game {
         // check if the endpoint is on the board
         // check if there's room at the endpoint
         return false;
+    }
+
+    private boolean hasRightColor(Point p) {
+        switch (status) {
+            case TurnBlackPlayer:
+                return board.getPiece(p).getColor() == Black;
+            case TurnWhitePlayer:
+                return board.getPiece(p).getColor() == White;
+            default:
+                return false;
+        }
     }
 
     private void updateViews() {
