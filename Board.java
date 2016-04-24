@@ -23,4 +23,12 @@ public class Board {
         return this.board[p.getX()][p.getY()];
     }
 
+    /**
+     * @param p the point to set the piece at
+     * @param piece the piece to set
+     */
+    void setPiece(Point p, Piece piece) {
+        this.board[p.getX()][p.getY()] = piece;
+    }
+
 }
