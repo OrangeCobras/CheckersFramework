@@ -15,5 +15,5 @@ with the following exceptions:
 2. Clone Repository    
     `git clone <url>`
 3. Move to cloned directory
-4. Add remote for your fork
+4. Add remote for your fork    
     `git remote add <name> <url>`
