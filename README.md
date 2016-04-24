@@ -7,6 +7,7 @@ It uses the international rules as specified on https://en.wikipedia.org/wiki/In
 with the following exceptions:
 
 * you don't have to capture the maximum number of pieces possible
+* you only loose when you cannot make any valid moves
 
 ## Setup
 
