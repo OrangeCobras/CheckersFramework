@@ -31,4 +31,17 @@ public class Board {
         this.board[p.getX()][p.getY()] = piece;
     }
 
+    /**
+     * Check whether a point lays within this board.
+     *
+     * @param p the point to check
+     * @return whether the point lays within the board
+     */
+    public boolean contains(Point p) {
+        return p.getX() >= 0
+                && p.getX() < board.length
+                && p.getY() >= 0
+                && p.getY() < board.length;
+    }
+
 }
