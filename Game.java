@@ -60,5 +60,32 @@ public class Game {
             v.invalidate();
         });
     }
+    
+    private void initialize() {
+        //set white pieces
+        for (int y = 10; y <= 7; y--) {
+            int x = 0;
+            if (y % 2 == 0) {
+                x = 0;
+            } else {
+                x = 1;
+            }
+            for (; x <= 10; x = x + 2) {
+                board.setPiece(new Point(x,y), Piece.White);
+            }
+        }
+        //set black pieces
+        for (int y = 0; y <= 4; y++) {
+            int x = 0;
+            if (y % 2 == 0) {
+                x = 1;
+            } else {
+                x = 0;
+            }
+            for (; x <= 10; x = x + 2) {
+                board.setPiece(new Point(x,y), Piece.Black);
+            }
+        }
+    }
 
 }
