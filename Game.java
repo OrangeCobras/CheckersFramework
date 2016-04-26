@@ -1,6 +1,7 @@
 package CheckersFramework;
 
 import static CheckersFramework.Color.*;
+import java.util.Collection;
 import java.util.LinkedList;
 
 /**
@@ -14,12 +15,14 @@ public class Game {
     private final Board board;
     private final MoveGetter input;
     private final LinkedList<View> views;
+    private final Collection<Point> startingPoints;
     private Status status;
 
     public Game(MoveGetter input) {
         this.board = new Board(BOARD_SIZE);
         this.input = input;
         this.views = new LinkedList<>();
+        this.startingPoints = new LinkedList<>();
         this.status = Status.TurnWhitePlayer;
     }
 
@@ -41,6 +44,19 @@ public class Game {
         // check if the endpoint is on the board
         // check if there's room at the endpoint
         return false;
+    }
+
+    private void calcStartingPoints() {
+        startingPoints.clear();
+        Point p;
+        for (int x = 0; x < BOARD_SIZE; x++) {
+            for (int y = 0; y < BOARD_SIZE; y++) {
+                p = new Point(x, y);
+                if (hasRightColor(p)) {
+                    startingPoints.add(p);
+                }
+            }
+        }
     }
 
     private boolean hasRightColor(Point p) {
