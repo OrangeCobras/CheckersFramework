@@ -29,7 +29,6 @@ public class Game {
     public void start() {
         initializeBoard();
         /* **** TODO **** */
-        // inititalize board
         // manage game status
         // get moves - input.getMove()
         // validate moves - isValid(Move m)
