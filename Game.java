@@ -11,7 +11,7 @@ import java.util.LinkedList;
  */
 public class Game {
 
-    private final static int BOARD_SIZE = 10;
+    private static final int BOARD_SIZE = 10;
     private final Board board;
     private final MoveGetter input;
     private final LinkedList<View> views;
