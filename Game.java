@@ -27,6 +27,7 @@ public class Game {
     }
 
     public void start() {
+        initializeBoard();
         /* **** TODO **** */
         // inititalize board
         // manage game status
