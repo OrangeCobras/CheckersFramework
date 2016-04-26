@@ -94,6 +94,39 @@ public class Game {
         }
     }
 
+    /**
+     * Check if a move is a king move.
+     *
+     * @param m the move to check
+     * @return whether the move is a king move
+     */
+    private boolean isKingMove(Move m) {
+        int ownPieces = 0;
+        int opponentPieces = 0;
+        Point p;
+        for (int i = 1; i < m.getScalar(); i++) {
+            p = new Point(
+                    m.getStart().getX() + m.getDirection().getDeltaX() * i,
+                    m.getStart().getY() + m.getDirection().getDeltaY() * i
+            );
+            if (board.getPiece(p) != null) {
+                if (hasRightColor(p)) {
+                    ownPieces++;
+                } else {
+                    opponentPieces++;
+                }
+            }
+        }
+        p = new Point(
+                m.getStart().getX() + m.getDeltaX(),
+                m.getStart().getY() + m.getDeltaY()
+        );
+        return board.contains(p)
+                && board.getPiece(p) == null
+                && ownPieces == 0
+                && opponentPieces <= 1;
+    }
+
     private void updateViews() {
         views.stream().forEach((v) -> {
             v.setBoard(board);
