@@ -42,4 +42,11 @@ public class Move {
         return start;
     }
 
+    /**
+     * @return the scalar
+     */
+    public int getScalar() {
+        return scalar;
+    }
+
 }
