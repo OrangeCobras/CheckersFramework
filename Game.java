@@ -46,6 +46,10 @@ public class Game {
         updateViews();
     }
 
+    private void endTurn() {
+        status = status.invert();
+    }
+
     private void initializeBoard() {
         for (int x = 0; x < BOARD_SIZE; x++) {
             for (int y = 0; y < BOARD_SIZE; y++) {
