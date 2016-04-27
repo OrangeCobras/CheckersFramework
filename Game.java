@@ -104,7 +104,7 @@ public class Game {
      * @param m the move to check
      * @return whether the move is a king move
      */
-    private boolean isKingMove(Move m) {
+    private MoveInfo getInfo(Move m) {
         int ownPieces = 0;
         int opponentPieces = 0;
         Point p;
@@ -125,9 +125,12 @@ public class Game {
                 m.getStart().getX() + m.getDeltaX(),
                 m.getStart().getY() + m.getDeltaY()
         );
-        return board.isEmpty(p)
+        return new MoveInfo(
+                board.isEmpty(p)
                 && ownPieces == 0
-                && opponentPieces <= 1;
+                && opponentPieces <= 1,
+                opponentPieces == 1
+        );
     }
 
     private void updateViews() {
