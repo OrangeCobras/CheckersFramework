@@ -50,6 +50,10 @@ public class Game {
         status = status.invert();
     }
 
+    private void execute(Move m) {
+        // TODO
+    }
+
     private void initializeBoard() {
         for (int x = 0; x < BOARD_SIZE; x++) {
             for (int y = 0; y < BOARD_SIZE; y++) {
