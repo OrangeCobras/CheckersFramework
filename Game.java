@@ -99,10 +99,10 @@ public class Game {
     }
 
     /**
-     * Check if a move is a king move.
+     * Get information about a move.
      *
-     * @param m the move to check
-     * @return whether the move is a king move
+     * @param m the move to get information about
+     * @return information about the move
      */
     private MoveInfo getInfo(Move m) {
         int ownPieces = 0;
