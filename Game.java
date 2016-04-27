@@ -77,6 +77,22 @@ public class Game {
         }
     }
 
+    private void calcPossibleMoves() {
+        possibleMoves.clear();
+        addCapturingMoves();
+        if (possibleMoves.isEmpty()) {
+            addNormalMoves();
+        }
+    }
+
+    private void addCapturingMoves() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    private void addNormalMoves() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
     private boolean activePieceAt(Point p) {
         switch (status) {
             case TurnBlackPlayer:
