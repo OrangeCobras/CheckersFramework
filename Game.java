@@ -142,6 +142,7 @@ public class Game {
     }
 
     private class MoveInfo {
+
         private final boolean kingMove;
         private final boolean captures;
 
@@ -149,6 +150,7 @@ public class Game {
             this.kingMove = kingMove;
             this.captures = captures;
         }
+
     }
 
 }
