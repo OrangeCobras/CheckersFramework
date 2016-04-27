@@ -40,16 +40,6 @@ public class Game {
         // update views - updateViews()
     }
 
-    private boolean isValid(Move m) {
-        /* **** TODO **** */
-        // check if piece at starting point of m is of right color - hasRightColor(Point p)
-        // check if player can capture a piece
-        // check if move does capture a piece
-        // check if the endpoint is on the board
-        // check if there's room at the endpoint
-        return false;
-    }
-
     private void initializeBoard() {
         for (int x = 0; x < BOARD_SIZE; x++) {
             for (int y = 0; y < BOARD_SIZE; y++) {
