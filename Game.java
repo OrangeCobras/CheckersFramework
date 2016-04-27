@@ -18,6 +18,7 @@ public class Game {
     private final MoveGetter input;
     private final Collection<View> views;
     private final Set<Point> startingPoints;
+    private final Set<Move> possibleMoves;
     private Status status;
 
     public Game(MoveGetter input) {
@@ -25,6 +26,7 @@ public class Game {
         this.input = input;
         this.views = new LinkedList<>();
         this.startingPoints = new HashSet<>();
+        this.possibleMoves = new HashSet<>();
         this.status = Status.TurnWhitePlayer;
     }
 
