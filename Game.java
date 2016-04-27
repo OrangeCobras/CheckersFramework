@@ -86,7 +86,37 @@ public class Game {
     }
 
     private void addCapturingMoves() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Point p1;
+        Point p2;
+        Move m;
+        MoveInfo info;
+        for (Point p : startingPoints) {
+            for (Direction d : Direction.values()) {
+                if (board.getPiece(p).isKing()) {
+                    for (int i = 1; i < BOARD_SIZE - 1; i++) {
+                        m = new Move(p, d, i);
+                        info = getInfo(m);
+                        if (info.kingMove && info.captures) {
+                            possibleMoves.add(m);
+                        }
+                    }
+                } else {
+                    p1 = new Point(
+                            p.getX() + d.getDeltaX(),
+                            p.getY() + d.getDeltaY()
+                    );
+                    p2 = new Point(
+                            p.getX() + 2 * d.getDeltaX(),
+                            p.getY() + 2 * d.getDeltaY()
+                    );
+                    if (board.isEmpty(p2)
+                            && !board.isEmpty(p)
+                            && !activePieceAt(p1)) {
+                        possibleMoves.add(new Move(p, d, 2));
+                    }
+                }
+            }
+        }
     }
 
     private void addNormalMoves() {
