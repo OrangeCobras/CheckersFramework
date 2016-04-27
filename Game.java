@@ -138,4 +138,14 @@ public class Game {
         });
     }
 
+    private class MoveInfo {
+        private final boolean kingMove;
+        private final boolean captures;
+
+        public MoveInfo(boolean kingMove, boolean captures) {
+            this.kingMove = kingMove;
+            this.captures = captures;
+        }
+    }
+
 }
