@@ -78,9 +78,11 @@ public class Game {
     private boolean activePieceAt(Point p) {
         switch (status) {
             case TurnBlackPlayer:
-                return board.getPiece(p).getColor() == Black;
+                return board.contains(p)
+                        && board.getPiece(p).getColor() == Black;
             case TurnWhitePlayer:
-                return board.getPiece(p).getColor() == White;
+                return board.contains(p)
+                        && board.getPiece(p).getColor() == White;
             default:
                 return false;
         }
