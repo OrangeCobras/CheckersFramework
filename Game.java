@@ -124,7 +124,7 @@ public class Game {
                             p.getY() + 2 * d.getDeltaY()
                     );
                     if (board.isEmpty(p2)
-                            && !board.isEmpty(p)
+                            && !board.isEmpty(p1)
                             && !activePieceAt(p1)) {
                         possibleMoves.add(new Move(p, d, 2));
                     }
