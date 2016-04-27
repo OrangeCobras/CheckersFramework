@@ -24,17 +24,13 @@ public class Move {
     }
 
     /**
-     * @return the delta on the x-axis
+     * @return the end point of the move.
      */
-    public int getDeltaX() {
-        return this.direction.getDeltaX() * scalar;
-    }
-
-    /**
-     * @return the delta on the y-axis
-     */
-    public int getDeltaY() {
-        return this.direction.getDeltaY() * scalar;
+    public Point getEnd() {
+        return new Point(
+                start.getX() + direction.getDeltaX() * scalar,
+                start.getX() + direction.getDeltaX() * scalar
+        );
     }
 
     /**
