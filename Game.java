@@ -60,7 +60,19 @@ public class Game {
     }
 
     private void execute(Move m) {
-        // TODO
+        board.setPiece(m.getEnd(), board.getPiece(m.getStart()));
+        for (int s = 0; s < m.getScalar(); s++) {
+            board.setPiece(new Point(
+                    m.getStart().getX() + s * m.getDirection().getDeltaX(),
+                    m.getStart().getY() + s * m.getDirection().getDeltaY()
+            ),
+                    null
+            );
+        }
+        if (status == TurnBlackPlayer && m.getEnd().getY() == BOARD_SIZE
+                || status == TurnWhitePlayer && m.getEnd().getY() == 0) {
+            board.setPiece(m.getEnd(), board.getPiece(m.getEnd()).crowned());
+        }
     }
 
     private void initializeBoard() {
