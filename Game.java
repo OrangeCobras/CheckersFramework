@@ -1,6 +1,7 @@
 package CheckersFramework;
 
 import static CheckersFramework.Color.*;
+import static CheckersFramework.Status.*;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -154,9 +155,9 @@ public class Game {
         switch (d) {
             case NorthEeast:
             case NorthWest:
-                return status == Status.TurnWhitePlayer;
+                return status == TurnWhitePlayer;
             default:
-                return status == Status.TurnBlackPlayer;
+                return status == TurnBlackPlayer;
         }
     }
 
