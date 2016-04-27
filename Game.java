@@ -68,6 +68,7 @@ public class Game {
     }
 
     private void calcPossibleMoves() {
+        calcStartingPoints();
         possibleMoves.clear();
         addCapturingMoves();
         if (possibleMoves.isEmpty()) {
