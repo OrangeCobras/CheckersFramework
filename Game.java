@@ -14,7 +14,7 @@ public class Game {
     private static final int BOARD_SIZE = 10;
     private final Board board;
     private final MoveGetter input;
-    private final LinkedList<View> views;
+    private final Collection<View> views;
     private final Collection<Point> startingPoints;
     private Status status;
 
