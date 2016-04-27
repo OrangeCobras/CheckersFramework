@@ -121,12 +121,8 @@ public class Game {
                 }
             }
         }
-        p = new Point(
-                m.getStart().getX() + m.getDeltaX(),
-                m.getStart().getY() + m.getDeltaY()
-        );
         return new MoveInfo(
-                board.isEmpty(p)
+                board.isEmpty(m.getEnd())
                 && ownPieces == 0
                 && opponentPieces <= 1,
                 opponentPieces == 1
