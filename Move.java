@@ -52,7 +52,7 @@ public class Move {
     /**
      * @return the direction
      */
-    protected Direction getDirection() {
+    public Direction getDirection() {
         return direction;
     }
 
