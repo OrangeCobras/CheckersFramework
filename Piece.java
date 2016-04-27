@@ -23,6 +23,19 @@ public enum Piece {
     }
 
     /**
+     * Get the crowned version of this piece.
+     *
+     * @return the crowned version of this
+     */
+    public Piece crowned() {
+        if (color == Color.White) {
+            return WhiteKing;
+        } else {
+            return BlackKing;
+        }
+    }
+
+    /**
      * @return whether this piece is a king
      */
     public boolean isKing() {
