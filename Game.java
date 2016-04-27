@@ -66,14 +66,14 @@ public class Game {
         for (int x = 0; x < BOARD_SIZE; x++) {
             for (int y = 0; y < BOARD_SIZE; y++) {
                 p = new Point(x, y);
-                if (hasRightColor(p)) {
+                if (activePieceAt(p)) {
                     startingPoints.add(p);
                 }
             }
         }
     }
 
-    private boolean hasRightColor(Point p) {
+    private boolean activePieceAt(Point p) {
         switch (status) {
             case TurnBlackPlayer:
                 return board.getPiece(p).getColor() == Black;
@@ -110,7 +110,7 @@ public class Game {
                     m.getStart().getY() + m.getDirection().getDeltaY() * i
             );
             if (board.getPiece(p) != null) {
-                if (hasRightColor(p)) {
+                if (activePieceAt(p)) {
                     ownPieces++;
                 } else {
                     opponentPieces++;
