@@ -45,4 +45,17 @@ public class Point {
         }
     }
 
+    /**
+     * Standard hash code imlementation.
+     *
+     * @return a hash code for this point
+     */
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 31 * hash + this.x;
+        hash = 31 * hash + this.y;
+        return hash;
+    }
+
 }
