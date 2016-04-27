@@ -120,7 +120,30 @@ public class Game {
     }
 
     private void addNormalMoves() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Point p1;
+        Move m;
+        MoveInfo info;
+        for (Point p : startingPoints) {
+            for (Direction d : Direction.values()) {
+                if (board.getPiece(p).isKing()) {
+                    for (int i = 1; i < BOARD_SIZE - 1; i++) {
+                        m = new Move(p, d, i);
+                        info = getInfo(m);
+                        if (info.kingMove) {
+                            possibleMoves.add(m);
+                        }
+                    }
+                } else if (isForward(d)) {
+                    p1 = new Point(
+                            p.getX() + d.getDeltaX(),
+                            p.getY() + d.getDeltaY()
+                    );
+                    if (board.isEmpty(p1)) {
+                        possibleMoves.add(new Move(p, d, 1));
+                    }
+                }
+            }
+        }
     }
 
     private boolean activePieceAt(Point p) {
