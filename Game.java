@@ -32,13 +32,22 @@ public class Game {
     }
 
     public void start() {
+        Move m;
         initializeBoard();
-        /* **** TODO **** */
-        // manage game status
-        // get moves - input.getMove()
-        // validate moves - isValid(Move m)
-        // execute moves
-        // update views - updateViews()
+        updateViews();
+        while (status != GameEnded) {
+            calcPossibleMoves();
+            if (possibleMoves.isEmpty()) {
+                endGame();
+                return;
+            }
+            do {
+                m = input.getMove();
+            } while (!possibleMoves.contains(m));
+            execute(m);
+            endTurn();
+            updateViews();
+        }
     }
 
     private void endGame() {
