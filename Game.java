@@ -2,7 +2,9 @@ package CheckersFramework;
 
 import static CheckersFramework.Color.*;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Set;
 
 /**
  * A Checkers game with international rules.
@@ -15,14 +17,14 @@ public class Game {
     private final Board board;
     private final MoveGetter input;
     private final Collection<View> views;
-    private final Collection<Point> startingPoints;
+    private final Set<Point> startingPoints;
     private Status status;
 
     public Game(MoveGetter input) {
         this.board = new Board(BOARD_SIZE);
         this.input = input;
         this.views = new LinkedList<>();
-        this.startingPoints = new LinkedList<>();
+        this.startingPoints = new HashSet<>();
         this.status = Status.TurnWhitePlayer;
     }
 
