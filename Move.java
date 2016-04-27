@@ -1,5 +1,7 @@
 package CheckersFramework;
 
+import java.util.Objects;
+
 /**
  *
  * @author Hendrik
@@ -70,6 +72,20 @@ public class Move {
             Move m = (Move) o;
             return start.equals(m.getStart());
         }
+    }
+
+    /**
+     * Standard hash code implementation.
+     *
+     * @return a hash code for this move
+     */
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 31 * hash + Objects.hashCode(this.start);
+        hash = 31 * hash + Objects.hashCode(this.direction);
+        hash = 31 * hash + this.scalar;
+        return hash;
     }
 
 }
