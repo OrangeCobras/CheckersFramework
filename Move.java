@@ -56,4 +56,20 @@ public class Move {
         return direction;
     }
 
+    /**
+     * Check for equality with another object.
+     *
+     * @param o the object to check for equality
+     * @return whether object o is equal to this point
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || o.getClass() != getClass()) {
+            return false;
+        } else {
+            Move m = (Move) o;
+            return start.equals(m.getStart());
+        }
+    }
+
 }
