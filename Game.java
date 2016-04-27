@@ -109,7 +109,7 @@ public class Game {
                     m.getStart().getX() + m.getDirection().getDeltaX() * i,
                     m.getStart().getY() + m.getDirection().getDeltaY() * i
             );
-            if (board.getPiece(p) != null) {
+            if (!board.isEmpty(p)) {
                 if (activePieceAt(p)) {
                     ownPieces++;
                 } else {
@@ -121,8 +121,7 @@ public class Game {
                 m.getStart().getX() + m.getDeltaX(),
                 m.getStart().getY() + m.getDeltaY()
         );
-        return board.contains(p)
-                && board.getPiece(p) == null
+        return board.isEmpty(p)
                 && ownPieces == 0
                 && opponentPieces <= 1;
     }
