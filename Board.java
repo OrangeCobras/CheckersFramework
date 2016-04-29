@@ -55,4 +55,11 @@ public class Board {
                 && board[p.getX()][p.getY()] == null;
     }
 
+    /**
+     * @return the size of the board
+     */
+    public int getSize() {
+        return board.length;
+    }
+
 }
