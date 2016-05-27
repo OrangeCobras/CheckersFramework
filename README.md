@@ -17,3 +17,7 @@ with the following exceptions:
 3. Move to cloned directory
 4. Add remote for your fork    
     `git remote add <name> <url>`
+
+## Workflow Cheatsheet 
+
+![Cheatsheet](https://www.git-tower.com/learn/content/02-cheat-sheets/03-vcs-workflow/workflow-of-version-control-large.jpg)
